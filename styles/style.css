@@ -106,23 +106,28 @@ p{
     padding: 0;
 }
 
-h3{
-    font-size: 40px;
-}
+
 
 header{
     height: 10%;
     width: 90%;
-    margin: auto;
+    margin: 0 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 3%;
+    margin-top: 2.5%;
+}
+
+h3{
+    font-size: 40px;
 }
 
 body{
-    background: radial-gradient( #57072f,#040218);
-    font-family: 'questrial', sans-serif;
+    background: url(bckgrnd.jpg);
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    font-family: 'raleway', sans-serif;
     color: white;
 }
 
@@ -130,14 +135,20 @@ section{
     height: 90vh;
     display:grid;
     grid-template-columns: 5% 1fr 1fr 1fr 5%;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr;
 }
 
 .hero{
-    grid-column: 3/4;
+    grid-column: 2/3;
     grid-row: 1/2;
-    justify-self: center;
     align-self: center;
+    transition: 0.2s ease-in-out;
+}
+
+.hero img{
+    border-radius: 10px;
+    animation: rotate 7s ease-in infinite;
+    height: 60vh;
 }
 
 nav{
@@ -158,37 +169,70 @@ li{
 
 li a{
     text-decoration: none;
+    color: rgb(104, 104, 104);
+    transition: 0.1s ease-in-out;
+}
+
+li.active a{
     color: white;
 }
 
 .details{
-    grid-column: 2/3;
+    grid-column: 3/4;
     grid-row: 1/2;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 10vh 10vh;
+    grid-template-rows: 1fr 16vh 24vh;
 }
 
 p{
     grid-column: 1/2;
     grid-row: 2/3;
     text-align: left;
-    font-size: 30px;
+    font-size: 27px;
+    font-weight: 200;
 }
 
 h1{
-    margin: 60vh 0 0 0;
+    margin: 57% 0 0 0;
     grid-row: 1/2;
-    font-size: 60px;
+    font-size: 70px;
 }
 
 .twt, .insta, .git{
     grid-column: 1/2;
     grid-row: 3/4;
-    height: 45px;
-    margin: 0 20% 0 0;
+    height: 50px;
+    opacity: 0.6;
+    transition: 0.1s ease-in-out;
 }
 
-.hero img{
-    border-radius: 10px;
+.twt, .git{
+    margin: 0 34% 0 0;
+}
+
+
+.git:hover, .twt:hover, .insta:hover{
+    opacity: 1;
+    transition: 0.1s ease-in-out;
+}
+
+.hero:hover{
+    filter: hue-rotate(90deg);
+    transition: 0.2s ease-in-out;
+}
+
+li a:hover{
+    font-size: 30px;
+    transition: 0.1s ease-in-out;
+}
+
+@keyframes rotate{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+
+    100%{
+        filter: hue-rotate(360deg);
+    }
 }
