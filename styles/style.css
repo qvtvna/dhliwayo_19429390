@@ -1,8 +1,10 @@
+/*removing margins and padding on the document*/
 *{
     margin: 0;
     padding: 0;
 }
 
+/*Logo and menu slashes positioning*/
 header{
     height: 10%;
     width: 90%;
@@ -13,10 +15,12 @@ header{
     margin-top: 2.5%;
 }
 
+/*Size change for the slashes*/
 h3{
     font-size: 40px;
 }
 
+/*Adding the document background and setting the font*/
 body{
     background: url(bckgrnd.jpg);
     background-repeat: no-repeat;
@@ -26,6 +30,7 @@ body{
     color: white;
 }
 
+/*Section grid that holds the rest of the content apart from the header*/
 section{
     height: 90vh;
     display:grid;
@@ -33,6 +38,7 @@ section{
     grid-template-rows: 1fr;
 }
 
+/*container for the image of me*/
 .hero{
     grid-column: 2/3;
     grid-row: 1/2;
@@ -40,28 +46,33 @@ section{
     transition: 0.2s ease-in-out;
 }
 
+/*slight changes to the appearance of my picture*/
 .hero img{
     border-radius: 10px;
     animation: rotate 7s ease-in infinite;
     height: 60vh;
 }
 
+/*navigation*/
 nav{
     grid-column: 4/5;
     text-align: right;
     align-self: center;
 }
 
+/*removing the bullet points and adjusting the position using top margin*/
 ul{
     list-style-type: none;
     margin-top: 25%;
 }
 
+/*adjusting the font size and adding extra space in between the links*/
 li{
     margin: 0 0 25% 0;
     font-size: 1.5rem;
 }
 
+/*separate colours to differentiate which page is being viewed*/
 li a{
     text-decoration: none;
     color: rgb(104, 104, 104);
@@ -72,6 +83,7 @@ li.active a{
     color: white;
 }
 
+/*container for the description and icons; grid used for positioning everything within the container*/
 .details{
     grid-column: 3/4;
     grid-row: 1/2;
@@ -80,6 +92,7 @@ li.active a{
     grid-template-rows: 1fr 16vh 24vh;
 }
 
+/*weight changed to differentiate b=the type of content it represents; text aligned to the left*/
 p{
     grid-column: 1/2;
     grid-row: 2/3;
@@ -88,12 +101,14 @@ p{
     font-weight: 200;
 }
 
+/*top margin to bring the h1 closer toward the paragraph and icons; as well as a font size change*/
 h1{
     margin: 57% 0 0 0;
     grid-row: 1/2;
     font-size: 70px;
 }
 
+/*adjusting the positioning and size of the icons*/
 .twt, .insta, .git{
     grid-column: 1/2;
     grid-row: 3/4;
@@ -102,26 +117,30 @@ h1{
     transition: 0.1s ease-in-out;
 }
 
+/*right margin used to create space between the icons*/
 .twt, .git{
     margin: 0 34% 0 0;
 }
 
-
+/*transition for when the cursor hovers over a particular icon*/
 .git:hover, .twt:hover, .insta:hover{
     opacity: 1;
     transition: 0.1s ease-in-out;
 }
 
+/*transition for when the cursor hovers over the picture of me*/
 .hero:hover{
     filter: hue-rotate(90deg);
     transition: 0.2s ease-in-out;
 }
 
+/*trasition for when the cursur hovers over one of the nav links*/
 li a:hover{
     font-size: 30px;
     transition: 0.1s ease-in-out;
 }
 
+/*ongoing animation used on my picture*/
 @keyframes rotate{
     0%{
         filter: hue-rotate(0deg);
