@@ -18,6 +18,7 @@ header{
 /*Size change for the slashes*/
 h3{
     font-size: 40px;
+    font-family: 'questrial', sans-serif;
 }
 
 /*Adding the document background and setting the font*/
@@ -134,10 +135,11 @@ h1{
     transition: 0.2s ease-in-out;
 }
 
-/*trasition for when the cursur hovers over one of the nav links*/
+/*transition for when the cursor hovers over one of the nav links*/
 li a:hover{
     font-size: 30px;
-    transition: 0.1s ease-in-out;
+    color: white;
+    transition: 0.2s ease-in-out;
 }
 
 /*ongoing animation used on my picture*/
