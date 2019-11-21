@@ -1,0 +1,110 @@
+/*removing margins and padding on the document*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Logo and menu slashes positioning*/
+header{
+    height: 10%;
+    width: 90%;
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5%;
+}
+
+/*Size change for the slashes*/
+h3{
+    font-size: 40px;
+    font-family: 'questrial', sans-serif;
+}
+
+/*Adding the document background and setting the font*/
+body{
+    background: url(bck-3.jpg);
+    height: 100%;
+    width: 100%;
+    font-family: 'raleway', sans-serif;
+    color: white;
+}
+
+/*Section grid that holds all of the content apart from the header*/
+section{
+    height: 90vh;
+    display:grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+    grid-template-rows: 1fr;
+}
+
+/*container for the description and titles; grid used for positioning everything within the container*/
+.details{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 27vh 1fr;
+}
+
+/*container for the youtube videos*/
+.video{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    align-self: center;
+    margin: 0 0 0 25%;
+    box-shadow: 3px 3px 20px rgba(255, 255, 255, 0.3);
+}
+
+/*navigation*/
+nav{
+    grid-column: 4/5;
+    text-align: right;
+    align-self: center;
+}
+
+/*removing the bullet points and adjusting the position using top margin*/
+ul{
+    list-style-type: none;
+    margin-top: 25%;
+}
+
+/*adjusting the font size and adding extra space in between the links*/
+li{
+    margin: 0 0 25% 0;
+    font-size: 1.5rem;
+}
+
+/*separate colours to differentiate which page is being viewed*/
+li a{
+    text-decoration: none;
+    color: rgb(104, 104, 104);
+    transition: 0.1s ease-in-out;
+}
+
+li.active a{
+    color: white;
+}
+
+/*transition for when the cursor hovers over one of the nav links*/
+li a:hover{
+    font-size: 30px;
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
+/*top margin to bring the h1 closer toward the paragraph; text aligned to the centre*/
+h1{
+    margin: 35% 0 0 0;
+    font-size: 5vh;
+    justify-self: center;
+    text-align: center;
+}
+
+/*weight changed to differentiate b=the type of content it represents; text aligned to the centre*/
+p{
+    font-weight: 200;
+    font-size: 2.5vh;
+    justify-self: center;
+    text-align: center;  
+}
