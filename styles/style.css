@@ -153,13 +153,14 @@ li a:hover{
     }
 }
 
+/*Media query to optimize the page for displays smaller than desktop size*/
 @media(max-width: 1259px){
     body{
         margin: 0;
         padding: 0;
         height: 100vh;
         width: 100%;
-        background: linear-gradient(-135deg, #170e10, #6f0a88);
+        background: linear-gradient(60deg, #6f0a88,#170e10);
     }
 
     header{
