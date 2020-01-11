@@ -42,16 +42,16 @@ section{
     grid-column: 2/3;
     grid-row: 1/2;
     display: grid;
-    grid-template-columns: 50vh 100vh;
+    grid-template-columns: 50vh 20vh 76.5vh;
     grid-template-rows: 30vh 60vh;
 }
 
 /*container for the youtube videos*/
 .video{
-    grid-column: 2/3;
+    grid-column: 3/3;
     grid-row: 1/3;
     align-self: center;
-    margin: 0 0 0 25%;
+    margin: 0 0 0 0%;
     box-shadow: 3px 3px 20px rgba(255, 255, 255, 0.3);
 }
 
@@ -70,7 +70,7 @@ ul{
 
 /*adjusting the font size and adding extra space in between the links*/
 li{
-    margin: 0 0 25% 0;
+    margin: 0 0 115% 0;
     font-size: 1.5rem;
 }
 
