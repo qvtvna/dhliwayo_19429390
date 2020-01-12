@@ -1,0 +1,71 @@
+/*removing margins and padding on the document*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Logo and menu slashes positioning*/
+header{
+    height: 10%;
+    width: 90%;
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5%;
+}
+
+/*Size change for the slashes*/
+.slashes{
+    font-size: 40px;
+    font-family: 'Questrial', sans-serif;
+}
+
+body{
+    background: url(img/BG-4.jpg);
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    font-family: 'raleway', sans-serif;
+    color: white;
+}
+
+section{
+    height: 90vh;
+    display:grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+nav{
+    grid-column: 4/5;
+    grid-row:2/3;
+    text-align: right;
+    align-self: center;
+}
+
+/*removing the bullet points and adjusting the position using top margin*/
+ul{
+    list-style-type: none;
+    margin-top: 25%;
+}
+
+/*adjusting the font size and adding extra space in between the links*/
+li{
+    margin: 0 0 25% 0;
+    font-size: 1.5rem;
+}
+
+/*separate colours to differentiate which page is being viewed*/
+li a{
+    text-decoration: none;
+    color: rgb(104, 104, 104);
+    transition: 0.1s ease-in-out;
+}
+
+li.active a{
+    color: white;
+}
+
+.con{
+    grid-row: 2/3;
+}
