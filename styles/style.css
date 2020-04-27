@@ -1,294 +1,299 @@
 /*removing margins and padding on the document*/
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /*variables to import fonts*/
-@font-face{
-    font-family: OldEng;
-    src: url(./OLDENGL.TTF)
+@font-face {
+  font-family: OldEng;
+  src: url(./OLDENGL.TTF);
 }
 
-@font-face{
-    font-family: gBoldIt;
-    src: url(./Gotham-BoldItalic.otf)
+@font-face {
+  font-family: gBoldIt;
+  src: url(./Gotham-BoldItalic.otf);
 }
 
-@font-face{
-    font-family: gBlack;
-    src: url(./Gotham-Black.otf)
+@font-face {
+  font-family: gBlack;
+  src: url(./Gotham-Black.otf);
 }
 
-@font-face{
-    font-family: gBookIt;
-    src: url(./Gotham-BookItalic.otf)
+@font-face {
+  font-family: gBookIt;
+  src: url(./Gotham-BookItalic.otf);
 }
 
-@font-face{
-    font-family: gMed;
-    src: url(./Gotham-Medium.otf)
+@font-face {
+  font-family: gMed;
+  src: url(./Gotham-Medium.otf);
 }
 
 /*Logo and menu slashes positioning*/
-header{
-    height: 10%;
+header {
+  height: 2%;
+  width: 90%;
+  margin: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5%;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  font-family: OldEng;
+  font-size: 2rem;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-fill-color: transparent;
+}
+
+header h1 {
+  color: white;
+  font-size: 2rem;
+}
+
+/*Adding the document background and setting the font*/
+html {
+  background: black;
+  background-repeat: no-repeat;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+/*Section grid that holds the rest of the content apart from the header*/
+section {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 0% 1fr 1fr 10% 5%;
+  grid-template-rows: 90vh;
+}
+
+/*navigation*/
+nav {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  text-align: right;
+  align-self: center;
+}
+
+.hero {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  display: grid;
+}
+
+.hero img {
+  max-width: 75%;
+  height: auto;
+  justify-self: center;
+  align-self: center;
+  border-radius: 1%;
+}
+/*removing the bullet points and adjusting the position using top margin*/
+ul {
+  list-style-type: none;
+  margin-top: 25%;
+}
+
+/*adjusting the font size and adding extra space in between the links*/
+li {
+  margin: 0 0 25% 0;
+  font-size: 1.3rem;
+  font-family: gMed;
+}
+
+/*separate colours to differentiate which page is being viewed*/
+li a {
+  text-decoration: none;
+  color: rgb(104, 104, 104);
+  transition: 0.1s ease-in-out;
+}
+
+li.active a {
+  color: white;
+}
+
+/*container for the description and icons; grid used for positioning everything within the container*/
+.details {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 90vh;
+  grid-template-rows: 32vh 15vh 1fr;
+}
+
+.hi {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  font-family: gBoldIt;
+  font-size: 30pt;
+  justify-self: center;
+  align-self: flex-end;
+  letter-spacing: 1rem;
+  margin-bottom: 0%;
+}
+
+.myName {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: center;
+  font-family: gBlack;
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: 0.7rem;
+  -webkit-text-stroke-width: 2.5px;
+  -webkit-text-fill-color: transparent;
+}
+
+.myName2 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  z-index: -1;
+  justify-self: center;
+  align-self: center;
+  font-family: gBlack;
+  font-size: 100px;
+  text-align: center;
+  letter-spacing: 0.7rem;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-fill-color: transparent;
+  margin: 15px 0 0 15px;
+}
+
+/*weight changed to differentiate b=the type of content it represents; text aligned to the left*/
+p {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  text-align: right;
+  font-size: 20pt;
+  font-family: gBookIt;
+  justify-self: center;
+  margin: 0 27% 0 15%;
+}
+
+/*adjusting the positioning and size of the icons*/
+.twt,
+.insta,
+.git {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  height: 40px;
+
+  opacity: 0.9;
+  transition: 0.1s ease-in-out;
+}
+
+/*transition for when the cursor hovers over one of the nav links*/
+li a:hover {
+  font-size: 30px;
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+/*Media query to optimize the page for displays smaller than desktop size*/
+@media (max-width: 1259px) {
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+  }
+
+  header {
+    height: 10vh;
     width: 90%;
     margin: 0 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    justify-items: center;
     margin-top: 2.5%;
-}
+  }
 
-header a{
-    text-decoration: none;
-    color: white;
-    font-family: OldEng;
-    font-size: 35px;
-}
+  header h1 {
+    color: black;
+  }
 
-
-header button{
-    border-style: none;
-    background-color: transparent;
-    cursor: pointer;
-    outline: none;
-}
-
-/*Adding the document background and setting the font*/
-html{
-    background: url(starboy.png);
-    background-repeat: no-repeat;
-    background-color: black;
-    height: 100%;
-    width: 100%;
-    color: white;
-}
-
-/*Section grid that holds the rest of the content apart from the header*/
-section{
-    height: 90vh;
-    display:grid;
-    grid-template-columns: 0% 1fr 1fr 5%;
-    grid-template-rows: 90vh;
-}
-
-/*navigation*/
-nav{
-    grid-column: 3/4;
-    grid-row: 1/2;
-    text-align: right;
-    align-self: center;
-}
-
-/*removing the bullet points and adjusting the position using top margin*/
-ul{
-    list-style-type: none;
-    margin-top: 25%;
-}
-
-/*adjusting the font size and adding extra space in between the links*/
-li{
-    margin: 0 0 25% 0;
-    font-size: 1.3rem;
-    font-family: gMed;
-}
-
-/*separate colours to differentiate which page is being viewed*/
-li a{
-    text-decoration: none;
-    color: rgb(104, 104, 104);
-    transition: 0.1s ease-in-out;
-}
-
-li.active a{
-    color: white;
-}
-
-/*container for the description and icons; grid used for positioning everything within the container*/
-.details{
-    grid-column: 2/3;
-    grid-row: 1/2;
+  section {
+    height: 90%;
     display: grid;
-    grid-template-columns: 90vh;
-    grid-template-rows: 32vh 15vh 1fr;
-}
+    grid-template-columns: 1fr;
+    grid-template-rows: 5% 1fr 1fr 1fr 5%;
+  }
 
-.hi{
-    grid-column: 1/2;
-    grid-row: 1/2;
-    font-family: gBoldIt;
-    font-size: 30pt;
-    justify-self: center;
-    align-self: flex-end;
-    letter-spacing: 1.0rem;
-    margin-bottom: 0%;
-}
-
-.myName{
-    grid-column: 1/2;
-    grid-row: 2/3;
-    justify-self: center;
-    align-self: center;
-    font-family: gBlack;
-    font-size: 100px;
-    text-align: center;
-    letter-spacing: 0.7rem;
-    -webkit-text-stroke-width: 2.5px;
-    -webkit-text-fill-color: transparent;
-}
-
-.myName2{
-    grid-column: 1/2;
-    grid-row: 2/3;
-    z-index: -1;
-    justify-self: center;
-    align-self: center;
-    font-family: gBlack;
-    font-size: 100px;
-    text-align: center;
-    letter-spacing: 0.7rem;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-fill-color: transparent;
-    margin: 15px 0 0 15px;
-}
-
-
-
-/*weight changed to differentiate b=the type of content it represents; text aligned to the left*/
-p{
+  .hero {
     grid-column: 1/2;
     grid-row: 3/4;
-    text-align: right;
-    font-size: 20pt;
-    font-family: gBookIt;
-    justify-self: center;
-    margin: 0 27% 0 15%;
-}
-
-/*adjusting the positioning and size of the icons*/
-.twt, .insta, .git{
-    grid-column: 1/2;
-    grid-row: 4/5;
-    height: 40px;
-
-    opacity: 0.9;
-    transition: 0.1s ease-in-out;
-}
-
-/*transition for when the cursor hovers over one of the nav links*/
-li a:hover{
-    font-size: 30px;
-    color: white;
     transition: 0.2s ease-in-out;
-}
+    display: grid;
+  }
 
-/*Media query to optimize the page for displays smaller than desktop size*/
-@media(max-width: 1259px){
-    body{
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        width: 100%;
-        background: linear-gradient(60deg, #6f0a88,#170e10);
-    }
+  .hero img {
+    width: auto;
+    height: auto;
+    animation: rotate 7s ease-in infinite;
+    justify-self: center;
+  }
 
-    header{
-        height: 10vh;
-        width: 90%;
-        margin: 0 5%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        justify-items: center;
-        margin-top: 2.5%;
-    }
+  nav {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: center;
+  }
 
-    section{
-        height: 90%;
-        display:grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 5vh 50vh 1fr 5vh;
-    }
+  ul {
+    margin: 0 0 0 0;
+    display: flex;
+  }
 
-    .hero{
-        grid-column: 1/2;
-        grid-row: 3/4;
-        align-self: center;
-        justify-self: center;
-        transition: 0.2s ease-in-out;
-    }
+  li {
+    margin: 0 0% 0 0%;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.2rem;
+  }
 
-    .hero img{
-        border-radius: 5px;
-        animation: rotate 7s ease-in infinite;
-        height: 25vh;
-    }
+  li a {
+    margin: 0 1vh 0 1vh;
+  }
 
-    nav{
-        margin: 0 0 0 0%;
-        grid-column: 1/2;
-        grid-row: 1/2;
-        justify-self: center;
-    }
+  .hi {
+    justify-self: center;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    display: grid;
+  }
 
-    ul{
-        margin: 0 0 0 0;
-        display: flex;
-    }
+  .details {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    display: grid;
+    grid-template-columns: 90%;
+    grid-template-rows: 20% 20% 20%;
+  }
 
-    li{
-        margin: 0 0% 0 0%;
-        align-self: center;
-        justify-self: center;
-        font-size: 1.2rem;
-    }
+  p {
+    font-size: 1rem;
+    grid-row: 2/3;
+    justify-self: center;
+  }
 
-    li a{
-        margin: 0 1vh 0 1vh ;
-    }
+  .myName {
+    grid-row: 3/4;
+    font-size: 4.2rem;
+    justify-content: center;
+  }
 
-    .details{
-        grid-column: 1/2;
-        grid-row: 2/3;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 30%;
-    }
-
-    h1{
-        display: flex;
-        grid-row: 1/2;
-        font-size: 5vh;
-        margin: 10% 0 0 0%;
-        justify-self: center;
-    }
-
-    p{
-        display: flex;
-        font-size: 2.5vh;
-        grid-row: 2/3;
-        text-align: center;
-        justify-self: center;
-        align-self: center;
-        margin: 0 5%;
-    }
-
-    .icons{
-        margin: 10% 0% 0 0;
-        justify-self: center;
-        grid-column: 1/2;
-        grid-row: 3/4;
-        opacity: 0.6;
-        transition: 0.1s ease-in-out;
-    }
-
-    .twt, .git, .insta{
-        height: 30px;
-    }
-
-    .twt, .git{
-        margin: 0 0% 0 0;
-    }
+  .myName2 {
+    grid-row: 3/4;
+    font-size: 4.2rem;
+    z-index: -1;
+  }
 }
